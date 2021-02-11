@@ -1,0 +1,26 @@
+{
+  "name": "bdd-framework",
+  "version": "1.0.0",
+  "description": "Bdd framework with cucumber",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "npx cypress open",
+    "cy:run": "npx cypress run",
+    "dashboard": "npx cypress run --record --key df7072fd-f763-40fd-9a64-32b68304e3fa",
+    "firefox": "npx cypress run --record --key df7072fd-f763-40fd-9a64-32b68304e3fa --browser firefox",
+    "chrome": "npx cypress run --record --key df7072fd-f763-40fd-9a64-32b68304e3fa --browser chrome"
+  },
+  "keywords": [
+    "cucumber",
+    "cypress"
+  ],
+  "author": "Udeme",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^6.4.0",
+    "cypress-cucumber-preprocessor": "^4.0.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  }
+}
