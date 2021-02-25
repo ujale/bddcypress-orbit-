@@ -3,9 +3,6 @@ import loginPages from "../Pages/loginPages";
 
 //valid user login
 Given("The client admin is on the home page of orbitclient application", () => {
-  // cy.visit("http://orbitclientui.test.vggdev.com", {
-  //   retryOneNetworkFailure: true,
-  // });
     loginPages.visitUrl()
 });
 
@@ -18,12 +15,15 @@ And("the submit button is clicked", () => {
   cy.get('.btn').click();
 });
 
+When(/^client admin waits for (\d+) milliseconds$/, function () {
+
+});
+
 Then(/^client admin should get an error message$/, function () {
     loginPages.errorMessage()
 });
 
 Then("client admin is successfully logged into the application and views dashboard page", () => {
-    //cy.get('.navbar-brand-logo');
     loginPages.assertDashboard()
 
 });

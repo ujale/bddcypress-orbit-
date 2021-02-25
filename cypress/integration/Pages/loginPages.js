@@ -1,14 +1,14 @@
-const orbiturl = "http://orbitclientui.test.vggdev.com"
+const orbitUrl = "http://orbitclientui.test.vggdev.com"
 const emailField = ':nth-child(1) > .withIcon > .form-control'
 const passwordField = ':nth-child(2) > .withIcon > .form-control'
 const loginSubmitBtn = '.btn'
-const dashboard = '.navbar-brand-logo'
+const dashboard = '[group="\'dashboard\'"] > .navigation-link'
 const errorMessage = '.toast-title'
 
 
 class loginPages{
     static visitUrl () {
-        cy.visit (orbiturl)
+        cy.visit (orbitUrl)
     }
 
     static enterLoginCred (email, password) {
@@ -21,11 +21,11 @@ class loginPages{
     }
 
     static assertDashboard() {
-        cy.get(dashboard).contains("orbit")
+        cy.get(dashboard).contains("Dashboard")
     }
 
     static errorMessage() {
-        cy.get(errorMessage).should('be.visible')
+        cy.get(errorMessage).contains('400')
     }
 
 } export default loginPages

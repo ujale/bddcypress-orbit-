@@ -8,7 +8,8 @@
     "cy:run": "npx cypress run",
     "dashboard": "npx cypress run --record --key df7072fd-f763-40fd-9a64-32b68304e3fa",
     "firefox": "npx cypress run --record --key df7072fd-f763-40fd-9a64-32b68304e3fa --browser firefox",
-    "chrome": "npx cypress run --record --key df7072fd-f763-40fd-9a64-32b68304e3fa --browser chrome"
+    "chrome": "npx cypress run --record --key df7072fd-f763-40fd-9a64-32b68304e3fa --browser chrome",
+    "cy:report": "npx cypress run --reporter cypress-mochawesome-reporter"
   },
   "keywords": [
     "cucumber",
@@ -18,7 +19,8 @@
   "license": "ISC",
   "devDependencies": {
     "cypress": "^6.4.0",
-    "cypress-cucumber-preprocessor": "^4.0.0"
+    "cypress-cucumber-preprocessor": "^4.0.0",
+    "cypress-mochawesome-reporter": "^1.3.0"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true

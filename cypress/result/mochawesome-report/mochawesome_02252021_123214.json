@@ -1,0 +1,112 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-02-25T11:28:38.891Z",
+    "end": "2021-02-25T11:32:14.875Z",
+    "duration": 215984,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4d1b1a5a-ef57-4022-949f-02135be788c3",
+      "title": "",
+      "fullFile": "cypress\\integration\\BusinessAccount.feature",
+      "file": "cypress\\integration\\BusinessAccount.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c5dc4197-25ce-432c-9aac-22b200db7df2",
+          "title": "Business Account Creation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create a Business Account",
+              "fullTitle": "Business Account Creation Create a Business Account",
+              "timedOut": null,
+              "duration": 213376,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"Failed screenshot\",\n  \"value\": \"screenshots\\\\BusinessAccount.feature\\\\Business Account Creation -- Create a Business Account (failed).png\"\n}",
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() =>\n    resolveAndRunAfterHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 120000ms: Expected to find element: `:nth-child(1) > .input-container > .form-control`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 120000ms: Expected to find element: `:nth-child(1) > .input-container > .form-control`, but never found it.\n    at Context.eval (http://orbitclientui.test.vggdev.com/__cypress/tests?p=cypress\\integration\\BusinessAccount.feature:71:6)\n    at Context.resolveAndRunStepDefinition (http://orbitclientui.test.vggdev.com/__cypress/tests?p=cypress\\integration\\BusinessAccount.feature:10558:9)\n    at Context.eval (http://orbitclientui.test.vggdev.com/__cypress/tests?p=cypress\\integration\\BusinessAccount.feature:9899:35)",
+                "diff": null
+              },
+              "uuid": "f3b386da-7020-44cd-bdb3-1c62a5f769c3",
+              "parentUUID": "c5dc4197-25ce-432c-9aac-22b200db7df2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "f3b386da-7020-44cd-bdb3-1c62a5f769c3"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 213376,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/result/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "showPassed": true,
+        "charts": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

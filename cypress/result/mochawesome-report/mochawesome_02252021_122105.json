@@ -1,0 +1,132 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-02-25T11:17:56.428Z",
+    "end": "2021-02-25T11:21:05.696Z",
+    "duration": 189268,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7e8a1ccd-0094-451f-a356-b9aafe5d88b4",
+      "title": "",
+      "fullFile": "cypress\\integration\\login.feature",
+      "file": "cypress\\integration\\login.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "526b4e40-8ec4-4ded-b866-638e497660d6",
+          "title": "Authentication",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login with invalid credentials",
+              "fullTitle": "Authentication Login with invalid credentials",
+              "timedOut": null,
+              "duration": 120580,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"Failed screenshot\",\n  \"value\": \"screenshots\\\\login.feature\\\\Authentication -- Login with invalid credentials (failed).png\"\n}",
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() =>\n    resolveAndRunAfterHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {
+                "message": "CypressError: Timed out after waiting `120000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `120000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
+                "estack": "CypressError: Timed out after waiting `120000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `120000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (http://orbitclientui.test.vggdev.com/__cypress/runner/cypress_runner.js:157295:13)\n    at http://orbitclientui.test.vggdev.com/__cypress/runner/cypress_runner.js:158278:16\n    at tryCatcher (http://orbitclientui.test.vggdev.com/__cypress/runner/cypress_runner.js:10609:23)\n    at http://orbitclientui.test.vggdev.com/__cypress/runner/cypress_runner.js:5731:41\n    at tryCatcher (http://orbitclientui.test.vggdev.com/__cypress/runner/cypress_runner.js:10609:23)\n    at Promise._settlePromiseFromHandler (http://orbitclientui.test.vggdev.com/__cypress/runner/cypress_runner.js:8544:31)\n    at Promise._settlePromise (http://orbitclientui.test.vggdev.com/__cypress/runner/cypress_runner.js:8601:18)\n    at Promise._settlePromise0 (http://orbitclientui.test.vggdev.com/__cypress/runner/cypress_runner.js:8646:10)\n    at Promise._settlePromises (http://orbitclientui.test.vggdev.com/__cypress/runner/cypress_runner.js:8722:18)\n    at _drainQueueStep (http://orbitclientui.test.vggdev.com/__cypress/runner/cypress_runner.js:5316:12)\n    at _drainQueue (http://orbitclientui.test.vggdev.com/__cypress/runner/cypress_runner.js:5309:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://orbitclientui.test.vggdev.com/__cypress/runner/cypress_runner.js:5325:5)\n    at Async.drainQueues (http://orbitclientui.test.vggdev.com/__cypress/runner/cypress_runner.js:5195:14)\nFrom Your Spec Code:\n    at Function.visitUrl (http://orbitclientui.test.vggdev.com/__cypress/tests?p=cypress\\integration\\login.feature:30:10)\n    at Context.eval (http://orbitclientui.test.vggdev.com/__cypress/tests?p=cypress\\integration\\login.feature:105:26)\n    at Context.resolveAndRunStepDefinition (http://orbitclientui.test.vggdev.com/__cypress/tests?p=cypress\\integration\\login.feature:10536:9)\n    at Context.eval (http://orbitclientui.test.vggdev.com/__cypress/tests?p=cypress\\integration\\login.feature:9877:35)\nFrom Your Spec Code:\n    at Function.visitUrl (http://orbitclientui.test.vggdev.com/__cypress/tests?p=cypress\\integration\\login.feature:30:10)\n    at Context.eval (http://orbitclientui.test.vggdev.com/__cypress/tests?p=cypress\\integration\\login.feature:105:26)\n    at Context.resolveAndRunStepDefinition (http://orbitclientui.test.vggdev.com/__cypress/tests?p=cypress\\integration\\login.feature:10536:9)\n    at Context.eval (http://orbitclientui.test.vggdev.com/__cypress/tests?p=cypress\\integration\\login.feature:9877:35)",
+                "diff": null
+              },
+              "uuid": "c6374479-9c55-49ad-8bab-979429c32fbb",
+              "parentUUID": "526b4e40-8ec4-4ded-b866-638e497660d6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login with valid credentials",
+              "fullTitle": "Authentication Login with valid credentials",
+              "timedOut": null,
+              "duration": 65727,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() =>\n    resolveAndRunAfterHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "9ccc5e8f-00e9-4330-9a59-6f3630a1d200",
+              "parentUUID": "526b4e40-8ec4-4ded-b866-638e497660d6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9ccc5e8f-00e9-4330-9a59-6f3630a1d200"
+          ],
+          "failures": [
+            "c6374479-9c55-49ad-8bab-979429c32fbb"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 186307,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/result/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "showPassed": true,
+        "charts": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

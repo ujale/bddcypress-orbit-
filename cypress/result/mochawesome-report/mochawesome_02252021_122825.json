@@ -1,0 +1,112 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-02-25T11:26:35.190Z",
+    "end": "2021-02-25T11:28:25.300Z",
+    "duration": 110110,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "37c59442-8600-43d5-a606-70cf05e7628d",
+      "title": "",
+      "fullFile": "cypress\\integration\\Business.feature",
+      "file": "cypress\\integration\\Business.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6fb1a0f9-0cca-403e-a83e-f68dbb11ca1f",
+          "title": "BusinessCreation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create a Business",
+              "fullTitle": "BusinessCreation Create a Business",
+              "timedOut": null,
+              "duration": 106769,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"Failed screenshot\",\n  \"value\": \"screenshots\\\\Business.feature\\\\BusinessCreation -- Create a Business (failed).png\"\n}",
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() =>\n    resolveAndRunAfterHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {
+                "message": "CypressError: `cy.type()` can only be called on a single element. Your subject contained 4 elements.\n\nhttps://on.cypress.io/type",
+                "estack": "CypressError: `cy.type()` can only be called on a single element. Your subject contained 4 elements.\n\nhttps://on.cypress.io/type\n    at Context.type (http://orbitclientui.test.vggdev.com/__cypress/runner/cypress_runner.js:154110:17)\n    at Context.<anonymous> (http://orbitclientui.test.vggdev.com/__cypress/runner/cypress_runner.js:170619:21)\nFrom Your Spec Code:\n    at Context.eval (http://orbitclientui.test.vggdev.com/__cypress/tests?p=cypress\\integration\\Business.feature:67:77)\n    at Context.resolveAndRunStepDefinition (http://orbitclientui.test.vggdev.com/__cypress/tests?p=cypress\\integration\\Business.feature:10467:9)\n    at Context.eval (http://orbitclientui.test.vggdev.com/__cypress/tests?p=cypress\\integration\\Business.feature:9808:35)\nFrom Your Spec Code:\n    at Context.eval (http://orbitclientui.test.vggdev.com/__cypress/tests?p=cypress\\integration\\Business.feature:67:77)\n    at Context.resolveAndRunStepDefinition (http://orbitclientui.test.vggdev.com/__cypress/tests?p=cypress\\integration\\Business.feature:10467:9)\n    at Context.eval (http://orbitclientui.test.vggdev.com/__cypress/tests?p=cypress\\integration\\Business.feature:9808:35)",
+                "diff": null
+              },
+              "uuid": "9cd39d8a-dd75-4d6b-a55d-ed771945a6e5",
+              "parentUUID": "6fb1a0f9-0cca-403e-a83e-f68dbb11ca1f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "9cd39d8a-dd75-4d6b-a55d-ed771945a6e5"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 106769,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/result/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "showPassed": true,
+        "charts": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

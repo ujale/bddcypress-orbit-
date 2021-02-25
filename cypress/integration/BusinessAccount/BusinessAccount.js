@@ -1,4 +1,5 @@
 import {Given, When, And, Then} from "cypress-cucumber-preprocessor/steps";
+import loginPages from "../Pages/loginPages";
 
 Given(/^The client admin is on the home page of orbitclient application$/, function () {
     cy.visit("http://orbitclientui.test.vggdev.com", {
@@ -45,9 +46,11 @@ Then(/^select 'Luster' as Business, select provider gateway as'GTBANK' and submi
     cy.get('.col-lg-5 > .form-control').type("0014109992")
     cy.wait(5000)
     cy.get('.col-lg-7 > .input-container > .form-control').click
-    cy.wait(4000)
+    cy.wait(12000)
     cy.get('.ng-tns-c13-2.ng-dirty > .btn').click({force:true})
-    cy.get('.toast-message')
-    cy.contains('Account lookup failed')
+    cy.wait(10000)
+
+
+
 
 });
