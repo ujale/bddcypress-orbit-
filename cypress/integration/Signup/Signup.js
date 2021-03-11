@@ -4,6 +4,9 @@ Given(/^User is on the orbit client homepage$/, function () {
     cy.visit("http://orbitclientui.test.vggdev.com", {
     retryOneNetworkFailure: true,
     });
+    cy.reload()
+    cy.clearCookies({log: true})
+    cy.clearLocalStorage({log: true})
 
 });
 When(/^User clicks on the 'Sign up' link$/, function () {

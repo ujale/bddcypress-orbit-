@@ -28,11 +28,11 @@ When(/^user clicks on the 'Settings' module$/, function () {
 });
 When(/^Clicks on 'Manage User' module$/, function () {
     cy.get('a.navigation-link').eq(10).click({force:true})
-    cy.wait(8000)
+    cy.wait(7000)
 });
 When(/^Clicks on the 'Add User' tab$/, function () {
     cy.get('.card-body > .btn').click()
-    cy.wait(8000)
+    cy.wait(7000)
 });
 Then(/^fills in "([^"]*)" as First name, "([^"]*)" as Last name, "([^"]*)" as Email, "([^"]*)" as Password and "([^"]*)" as Confirm password$/, function () {
     cy.get(':nth-child(1) > .form-control').type("Frand")
@@ -42,7 +42,7 @@ Then(/^fills in "([^"]*)" as First name, "([^"]*)" as Last name, "([^"]*)" as Em
     cy.get('#confirmPassword').type("P@ssw0rd")
 });
 And ('Clicks on the submit button', () => {
-    cy.get('div.ng-tns-c13-2 > .btn').click({force:true})
+    cy.get('div.ng-tns-c14-2 > .btn').click({force:true})
     cy.wait(2000)
 });
 

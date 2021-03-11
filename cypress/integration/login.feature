@@ -19,3 +19,4 @@ As an Admin, i should be abe to login with a valid email and password
     And the submit button is clicked
     And client admin waits for 5000 milliseconds
     Then client admin is successfully logged into the application and views dashboard page
+

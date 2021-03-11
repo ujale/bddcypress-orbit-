@@ -15,7 +15,8 @@
     "json": true,
     "showPassed": true,
     "charts": true,
-    "timestamp": "mmddyyyy_HHMMss"
+    "timestamp": "mmddyyyy_HHMMss",
+    "video": false
   },
   "screenshotsFolder": "cypress/screenshots"
 }

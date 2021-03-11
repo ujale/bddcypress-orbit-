@@ -4,6 +4,9 @@ Given("The client admin is on the home page of orbitclient application", () => {
     cy.visit("http://orbitclientui.test.vggdev.com", {
         retryOneNetworkFailure: true,
     });
+    cy.reload()
+    cy.clearCookies({log: true})
+    cy.clearLocalStorage({log: true})
 });
 When(
     'He enters his email as "crusio@yopmail.com" and his password as "P@ssw0rd1"',
@@ -22,6 +25,8 @@ And("client admin waits for 10000 milliseconds", () => {
 
 Then("client admin is successfully logged into the application and views dashboard page", () => {
     cy.get('.navbar-brand-logo');
+    cy.reload()
+    cy.wait(3000)
 });
 
 When(/^He clicks on the 'Settings' module$/, function () {
@@ -39,8 +44,8 @@ When(/^Clicks on the 'Add Business' tab$/, function () {
 });
 
 Then(/^fills in "([^"]*)" as Business name, "([^"]*)" as Business Code and "([^"]*)" as Description$/, function () {
-    cy.get(':nth-child(1) > .ng-tns-c13-2 > .form-group > .withIcon > #name').type("Truthy")
-    cy.get(':nth-child(2) > .ng-tns-c13-2 > .form-group > .withIcon > #name').type("Tut")
+    cy.get(':nth-child(1) > .ng-tns-c10-1 > .form-group > .withIcon > #name').type("Truthy")
+    cy.get(':nth-child(2) > .ng-tns-c10-1 > .form-group > .withIcon > #name').type("Tut")
     cy.get(':nth-child(3) > .form-control').type("Test Bdd")
     cy.get('.col-lg-12 > .btn').click()
 
@@ -49,7 +54,7 @@ Then(/^Business with name "([^"]*)" already exists$/, function () {
     cy.get('.toast-error')
     cy.get('.toast-message')
     cy.contains('Business name already exist')
-    cy.get('.close > .ng-tns-c13-2').click()
+    cy.get('.close > .ng-tns-c10-1').click()
     cy.wait(4000)
 
 });

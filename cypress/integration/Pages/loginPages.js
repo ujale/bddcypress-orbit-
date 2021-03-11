@@ -28,4 +28,5 @@ class loginPages{
         cy.get(errorMessage).contains('400')
     }
 
+
 } export default loginPages
